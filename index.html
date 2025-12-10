@@ -9,7 +9,7 @@
     body {
       margin: 0;
       font-family: 'Inter', sans-serif;
-      background-color: #f2f4f8;
+      /* background-color: #f2f4f8; */
       color: #111;
     }
     header {
@@ -87,22 +87,13 @@
       </div>
       <p>2. Comparte el proyecto usando el hashtag <strong>#1M1USDT</strong>.<br />
     </section>
-
-    <div class="cta">
-      <a href="#">Doná ahora</a>
-    </div>
-
     <section>
       <h2>Transparencia</h2>
       <p>Podés ver todas las transacciones en blockchain en tiempo real. El proyecto es 100% abierto.</p>
-      <div id="contenedor-contenido" style="overflow: hidden; height: 400px;"></div>
-      <ul>
-        <li>Wallet pública: TQGrnp5zBwMY3tDzA34rCqRLb8Tvm63CUH</li>
-        <li>Recaudado: $12,375 USDT</li>
-        <li>Participantes: 12,375 personas</li>
-      </ul>
+      <div style="width:700px;height:900px; position:relative; overflow:hidden">
+        <iframe src="https://tronscan.org/#/address/TQGrnp5zBwMY3tDzA34rCqRLb8Tvm63CUH" style="top:-280px; left: 5px; position:absolute;" width="700" height="1020" scrolling="no" frameborder="0" ></iframe>
+      </div>
     </section>
-
     <section class="videos">
       <h2>Videos</h2>
       <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video 1 - El experimento ha comenzado" frameborder="0" allowfullscreen></iframe>
@@ -114,19 +105,4 @@
     © 2025 1M1USDT — Proyecto de colaboración social descentralizada.
   </footer>
 </body>
-<script>
-  fetch('https://tronscan.org/#/address/TQGrnp5zBwMY3tDzA34rCqRLb8Tvm63CUH')
-  .then(response => response.text())
-  .then(html => {
-    // Crea un elemento temporal para parsear el HTML
-    console.log(response);
-    const tempDiv = document.createElement('div');
-    tempDiv.innerHTML = html;
-    // Busca la sección que quieres mostrar (ej. un div con id="seccion-interes")
-    const seccionDeseada = tempDiv.getElementsByClassName('address-asset');
-    if (seccionDeseada) {
-      document.getElementById('contenedor-contenido').innerHTML = seccionDeseada.outerHTML;
-    }
-  });
-</script>
 </html>
