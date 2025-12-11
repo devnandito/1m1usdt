@@ -57,3 +57,25 @@ footer {
   font-size: 0.9rem;
   color: #555;
 }
+
+/* Custom css*/
+
+.container {
+  margin: 10px auto;
+  width: 75%
+}
+
+#land1 {
+  max-width: 100px;
+  float: left;
+  border-radius: 3px solid white;
+  margin-right: 20px
+}
+
+#land2 {
+  max-width: 100px;
+  float: right;
+  border-radius: 3px solid white;
+  margin-right: 20px
+}
+
